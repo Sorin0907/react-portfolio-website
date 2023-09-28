@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Mooli&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Martian Mono', sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+h1,
+h4,
+p,
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: rgb(248, 217, 15);
+  color: #222;
+  border: 1px solid #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn2 {
+  background: transparent;
+  color: #fff;
+}
+
+.btn:hoover {
+  background: rgba(255, 255, 255, 0);
+  color: #fff;
+  transition: 0.3s;
+}
