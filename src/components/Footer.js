@@ -30,7 +30,7 @@ const Footer = () => {
                   color: "#fff",
                   marginRight: "2rem",
                 }}
-              />{" "}
+              />
               0774 8431 XXX
             </h4>
           </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                   color: "#fff",
                   marginRight: "2rem",
                 }}
-              />{" "}
+              />
               sorin.adamoiu@gmail.com
             </h4>
           </div>

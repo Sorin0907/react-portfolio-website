@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Mooli&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Mooli&display=swap");
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Martian Mono', sans-serif;
+  font-family: "Martian Mono", sans-serif;
 }
 
 body {
@@ -39,7 +39,7 @@ ul {
   color: #fff;
 }
 
-.btn:hoover {
+.btn:hover {
   background: rgba(255, 255, 255, 0);
   color: #fff;
   transition: 0.3s;
