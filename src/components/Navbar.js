@@ -19,24 +19,62 @@ const Navbar = ({ scrollToPage }) => {
 
   window.addEventListener("scroll", changeColor);
 
+  const closeNavbar = () => {
+    if (window.innerWidth < 768) {
+      setClick(false);
+    }
+  };
+
   return (
     <div className={color ? "header header-bg" : "header"}>
       <Link to="/">
         <h1 className="">Sorin Adamoiu</h1>
       </Link>
       <nav className={click ? "nav active" : "nav"}>
-        <a onClick={() => scrollToPage("home")}>Home</a>
-        <a onClick={() => scrollToPage("about")}>About</a>
-        <a onClick={() => scrollToPage("portfolio")}>Portfolio</a>
-        <a onClick={() => scrollToPage("contact")}>Contact</a>
+        <a
+        sx="--color #a3aaae"
+          onClick={() => {
+            scrollToPage("home");
+            closeNavbar();
+          }}
+        >
+          Home
+        </a>
+        <a
+        sx="--color #a3aaae"
+          onClick={() => {
+            scrollToPage("about");
+            closeNavbar();
+          }}
+        >
+          About
+        </a>
+        <a
+        sx="--color #a3aaae"
+          onClick={() => {
+            scrollToPage("portfolio");
+            closeNavbar();
+          }}
+        >
+          Portfolio
+        </a>
+        <a
+        sx="--color #a3aaae"
+          onClick={() => {
+            scrollToPage("contact");
+            closeNavbar();
+          }}
+        >
+          Contact
+        </a>
       </nav>
-      <div className="menu" onClick={handleClick}>
-        {click ? (
-          <FaTimes size={20} style={{ color: "#fff" }} />
-        ) : (
-          <FaBars size={20} style={{ color: "#fff" }} />
-        )}
-      </div>
+        <div className="menu" onClick={handleClick}>
+          {click ? (
+            <FaTimes size={20} style={{ color: "#fff" }} />
+          ) : (
+            <FaBars size={20} style={{ color: "#fff" }} />
+          )}
+        </div>
     </div>
   );
 };
