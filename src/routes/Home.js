@@ -4,11 +4,10 @@ import MainImage from '../components/MainImage';
 import Footer from '../components/Footer';
 
 const Home = () => {
+  const ref = React.useRef();
   return (
-    <div>
-      <Navbar />
+    <div ref={ref}>
       <MainImage />
-      <Footer />
     </div>
   )
 }

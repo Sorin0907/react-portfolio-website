@@ -18,13 +18,14 @@
     display: flex;
 }
 
-.nav li{
-    padding: 0 1rem;
-}
+.nav a {
+    cursor: pointer;
+  }
 
-.nav li a{
+.nav a{
     font-size: 1.3rem;
     font-weight: 600;
+    padding:  1rem;
 }
 
 .menu {
@@ -50,12 +51,9 @@
         left: 0;
     }
 
-    .nav li {
-        padding: 1rem 0;
-    }
-
-    .nav li a {
+    .nav a {
         font-size: 2rem;
+        padding: 1rem 0;
     }
 
     .menu {

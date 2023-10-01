@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 import React, { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ scrollToPage }) => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
@@ -22,22 +22,14 @@ const Navbar = () => {
   return (
     <div className={color ? "header header-bg" : "header"}>
       <Link to="/">
-        <h1>Sorin Adamoiu</h1>
+        <h1 className="">Sorin Adamoiu</h1>
       </Link>
-      <ul className={click ? "nav active" : "nav"}>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/portfolio">Portfolio</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
+      <nav className={click ? "nav active" : "nav"}>
+        <a onClick={() => scrollToPage("home")}>Home</a>
+        <a onClick={() => scrollToPage("about")}>About</a>
+        <a onClick={() => scrollToPage("portfolio")}>Portfolio</a>
+        <a onClick={() => scrollToPage("contact")}>Contact</a>
+      </nav>
       <div className="menu" onClick={handleClick}>
         {click ? (
           <FaTimes size={20} style={{ color: "#fff" }} />
