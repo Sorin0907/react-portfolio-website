@@ -4,11 +4,10 @@ import Footer from "../components/Footer";
 import MainImg2 from "../components/MainImg2";
 
 const Contact = () => {
+  const ref = React.useRef();
   return (
-    <div>
-      <Navbar />
+    <div ref={ref}>
       <MainImg2 heading="CONTACT" text="Let's connect" />
-      <Footer />
     </div>
   );
 };

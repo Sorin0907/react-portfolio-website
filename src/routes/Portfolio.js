@@ -5,12 +5,11 @@ import MainImg2 from "../components/MainImg2";
 import Work from "../components/Work";
 
 const Portfolio = () => {
+  const ref = React.useRef();
   return (
-    <div>
-      <Navbar />
+    <div ref={ref}>
       <MainImg2 heading="Portfolio" text="My most recent projects" />
       <Work />
-      <Footer />
     </div>
   );
 };
