@@ -1,13 +1,11 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import MainImage from '../components/MainImage';
-import Footer from '../components/Footer';
+import Introduction from '../components/Introduction';
 
 const Home = () => {
   const ref = React.useRef();
   return (
     <div ref={ref}>
-      <MainImage />
+      <Introduction />
     </div>
   )
 }

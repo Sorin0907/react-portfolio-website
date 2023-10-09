@@ -1,0 +1,121 @@
+/* Introduction.css */
+
+.introduction {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.paragraph-container {
+  position: relative;
+  width: 60vh;
+  margin-top: 30vh;
+  top: 20px;
+  left: 60px;
+  opacity: 0; /* Start with zero opacity */
+  transform: translateY(-20px); /* Move it up by 20px */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transition properties */
+}
+
+.paragraph-container.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.paragraph-container p {
+  font-size: 2rem;
+  padding: 20px;
+  position: relative; /* Required for pseudo-element */
+}
+
+/* Add a border using a pseudo-element */
+.paragraph-container p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid transparent; /* Initial border with no color */
+  border-radius: 10px; /* Border radius to control the appearance */
+  animation: borderAnimation 5s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #333333; /* Start color of the border */
+  }
+  50% {
+    border-color: rgb(
+      94,
+      6,
+      6
+    ); /* End color of the border (change to your desired color) */
+  }
+  100% {
+    border-color: #333333;
+  }
+}
+
+/* Apply these styles only for screens with a maximum width of 658px or less */
+@media screen and (max-width: 658px) {
+  .introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+    margin: 0 auto;
+  }
+
+  .paragraph-container {
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Start with zero opacity */
+    transform: translateY(-20px); /* Move it up by 20px */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transition properties */
+  }
+
+  .paragraph-container.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .paragraph-container p {
+    font-size: 1rem; /* Decrease font size for better mobile readability */
+    position: relative; /* Required for pseudo-element */
+  }
+
+  /* Add a border using a pseudo-element */
+  .paragraph-container p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 2px solid transparent; /* Initial border with no color */
+    border-radius: 5px; /* Border radius to control the appearance */
+    animation: borderAnimation 4s linear infinite; /* Adjust duration as needed */
+  }
+
+  @keyframes borderAnimation {
+    0% {
+      border-color: #333333; /* Start color of the border */
+    }
+    50% {
+      border-color: rgb(
+        94,
+        6,
+        6
+      ); /* End color of the border (change to your desired color) */
+    }
+    100% {
+      border-color: #333333;
+    }
+  }
+}
