@@ -1,0 +1,29 @@
+.expandable-container {
+  display: flex;
+  width: 30vw; /* Initial fixed width */
+  height: 70vh;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  transition: width 0.3s ease; /* Add a transition for smooth expansion */
+}
+
+.expandable-container.expanded {
+  width: auto; /* Allow the container to expand to the right */
+}
+
+.left-section {
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-content.expanded {
+  white-space: initial; /* Show full text when expanded */
+  overflow: auto; /* Show scrollbar when expanded */
+  text-overflow: inherit;
+}
+
+.expand-button {
+  padding: 10px;
+}

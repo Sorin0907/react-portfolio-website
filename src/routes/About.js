@@ -1,11 +1,12 @@
 import React from "react";
-import Summary from "../components/Summary";
+import ExpandableComponent from "../components/ExpandableTextContainer";
 
 const About = () => {
   const ref = React.useRef();
+  
   return (
     <div ref={ref}>
-      {/* <Summary /> */}
+      <ExpandableComponent />
     </div>
   );
 };
