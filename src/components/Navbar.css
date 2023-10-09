@@ -10,8 +10,8 @@
 }
 
 .header-bg {
-  background-color: rgba(0, 0, 0, 0.9);
-  transition: 0.3;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.7;
 }
 
 .nav {
