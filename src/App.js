@@ -6,6 +6,7 @@ import Contact from "./routes/Contact";
 import Portfolio from "./routes/Portfolio";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollIndicator from "./components/ScrollIndicator";
 
 const App = () => {
   const homeRef = React.useRef();
@@ -53,6 +54,7 @@ const App = () => {
       <div ref={contactRef}>
         <Contact />
       </div>
+      <ScrollIndicator />
       <Footer />
     </div>
   );
